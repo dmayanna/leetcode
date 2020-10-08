@@ -2,16 +2,18 @@ package leetcodeProblems;
 
 public class P9 {
 
-    public boolean isPalindrome(int x) {
+    public boolean isPalindrome(int number) {
 
-        String in = x + "";
-
-        StringBuilder builder = new StringBuilder();
-
-        for (int i = 0; i < in.length(); i++) {
-            builder.append(in.charAt((in.length() - 1) - i));
+        int output = 0;
+        int backup = number;
+        while (number != 0) {
+            output = output * 10 + number % 10;
+            number = number / 10;
         }
+        String string = "saa";
 
-        return in.equals(builder.toString()) ? true : false;
+        string.toLowerCase();
+
+        return output == backup ? true : false;
     }
 }
